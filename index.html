@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Aprendendo Html</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            #BoxOrange{
+                background-color: orange;
+            }
+            #BoxBlue{
+                background-color: deepskyblue;
+            }
+            #BoxGreen{
+                background-color: green;
+            }
+            #BoxRed{
+                background-color: red;
+            }
+            #BoxYellow{
+                background-color: yellow;
+            }
+            #BoxPurple{
+                background-color: purple;
+            }
+            #ListaBox .Box{
+                color: white;
+
+            }
+            .Box {
+                display: flex;
+                justify-content: center; 
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="BoxOrange" class="Box" style=" height: 100px; width: 100%;" >
+            <p style="">Content Area 1</p>
+        </div>
+        <div style="display: flex;">
+            <div id="BoxBlue" class="Box" style=" height: 150px; width: 50%;">
+                <p>Content Area 2</p>
+            </div> 
+            <div id="BoxGreen" class="Box" style="height: 150px; width: 50%;">
+                <p>Content Area 3</p>
+            </div>
+        </div>
+        <div id="ListaBox" style="display: flex;">
+            <div id="BoxRed" class="Box" style="height: 120px; width: 33.3%;">
+              <p>Content Area 4</p>
+            </div>
+            <div id="BoxYellow" class="Box" style="height: 120px; width: 33.3%;">
+                <p>Content Area 5</p>
+            </div>
+            <div id="BoxPurple" class="Box" style="height: 120px; width: 33.3%;">
+                <p>Content Area 6</p>
+            </div>
+        </div>
+    </body>
+</html>
