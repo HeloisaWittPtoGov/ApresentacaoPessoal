@@ -2,30 +2,46 @@
     <head>
         <title>Apresetação Maria Heloisa</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
        
-       <style>
+        <style>
             *{
                 margin: 0;
                 padding: 0;
                 font-family:Inter;
             }
-            .header{
-                background-color:lightsteelblue;
+
+            :root {
+                --background-color: lightsteelblue;
+                --background-color2: aliceblue;
+            }
+            :root .dark{
+                --background-color: rgb(9, 46, 94);
+                color: white;
+                --background-color2:rgb(27, 105, 173);
+            }
+            :root .dark button{
+                color: white;
+            }
+            
+            .header {
+                background-color:var(--background-color);
                 height: 15%;
                 width: 100%;
                 font-size: 25px;
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
                 align-items: center;
+
             }
+            
             .infosPrincipais{
-                background-color:aliceblue;
+                background-color:var(--background-color2);
                 padding: 50px 0 50px 120px;
             }
             .imagem{
-                background-color: aliceblue;
+                background-color: var(--background-color2);
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -50,7 +66,7 @@
                 padding: 0 0 5px 0;
             }
             .botoes{
-                background-color:aliceblue;
+                background-color:var(--background-color2);
                 height: 100px;
                 width: 100%;
                 display: flex;
@@ -59,7 +75,7 @@
                 padding:  50px 0 50px 0;
             }
             .botoes button{
-                background-color: lightsteelblue;
+                background-color: var(--background-color);
                 border: none;
                 border-radius: 35px ;
                 height: 50px;
@@ -73,37 +89,56 @@
                 border:2px solid black;
             }
             #final{
-                background-color: lightsteelblue;
-                height: 24px;;
+                background-color: var(--background-color);
+                height: 25px;;
                 width:100%;
+                
             }
             #campoNome{
-                border: 2px solid lightsteelblue;
+                border: 2px solid var(--background-color);
                 border-radius: 5%;
+            }  
+            .header button {
+                background-color:aliceblue;
+                border: 2px solid black;
+                border-radius: 100px;
+                height: 48px;
+                width: 48px;
+                font-size: 11px;  
+                transition: 0.3s;   
+            }
+            .header button:hover{
+                background-color:black;
+                border:2px solid white;
+                color: white;
             }
             
+            
         </style>
-        <body>
-            <header class="header">
-                <h1>Maria Heloisa Witt</h1>
-            </header>
-           <div id="Area!" style="display: flex;">
-                <div class="infosPrincipais" style= "height: 200px; width: 57%;">
-                    <h1 id="ola">Olá!</h1> 
-                    <h2 id="subtititulo">Um pouco sobre mim:</h2>
-                    <p id="descricao"> Me chamo Maria Heloisa Witt, sou de Presidente Getúlio - Santa Catariana.
-                        Tecnóloga em administração pelo Instituto Federal Catarinense - Campus Ibirama, atualmente cursando a 5° fase do curso de engenharia de software na UDESC CEAVI.</p>
-                    <input id="campoNome" type="text" name="Nome:" placeholder="Informe seu Nome">
-                </div>
-                <div class ="Imagem" style="height: 200px; width: 43%;">
-                    <img src="../assets/IMG_1942.JPG"/> 
-                </div>
-            </div>     
-            <div class="botoes">
-                <button id="curriculo">Clique aqui para saber mais</button>
-            </div>  
-            <div id="final"></div>  
-            <script src="app.js"></script>
-        </body>
     </head>
+
+    <body id= "body" class="dark">
+        <header class="header">
+                <h1>Maria Heloisa Witt</h1>
+                <button id="Tema">Mudar Tema</button>
+        </header>
+       <div id="Area!" style="display: flex;">
+            <div class="infosPrincipais" style= "height: 200px; width: 57%;">
+                <h1 id="ola">Olá!</h1> 
+                <h2 id="subtititulo">Um pouco sobre mim:</h2>
+                <p id="descricao"> Me chamo Maria Heloisa Witt, sou de Presidente Getúlio - Santa Catariana.
+                    Tecnóloga em administração pelo Instituto Federal Catarinense - Campus Ibirama, atualmente cursando a 5° fase do curso de engenharia de software na UDESC CEAVI.</p>
+                <input id="campoNome" type="text" name="Nome:" placeholder="Informe seu Nome">
+            </div>
+            <div class ="Imagem" style="height: 200px; width: 43%;">
+                <img src="../assets/IMG_1942.JPG"/> 
+            </div>
+        </div>     
+        <div class="botoes">
+            <button id="curriculo">Clique aqui para saber mais</button>
+        </div>  
+        <div id="final" class="final">
+        </div>  
+        <script src="app.js"></script>
+    </body>
  </html>
