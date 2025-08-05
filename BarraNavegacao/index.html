@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Barra de Navegacao</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .header{
+                width: 100%;
+            }
+            .menu{
+                background-color: dimgray;
+                text-align: center;
+            }
+            .menu ul li{
+                display: inline-block;
+            }
+            .menu ul li a{
+                display: block;
+                color: aliceblue;
+                font-size: 25px;
+                padding: 18px;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+            .main{
+                padding: 200px;
+            }
+            .footer{
+                background-color: dimgray;
+                text-align: center;
+                padding: 50px;
+                color: aliceblue;
+            }
+            .menu ul li a:hover{
+                background-color:lightgrey;
+                color: black;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="menu">
+                <ul>
+                    <li>
+                            <a href="#" >Home</a>
+                    </li>
+                    <li>
+                        <a href ="#footer">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="#">Produtos</a>
+                    </li>
+                    <li>
+                        <a href="#">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        <main class="main" style="height: 1000px;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam odio quam, iusto consequatur sapiente ad sit voluptatum corporis, molestias ab quaerat omnis repellendus distinctio, magnam neque dicta culpa impedit velit?</p>
+        </main>    
+        <footer id= "footer" class="footer">
+            <p>Todos os direitos reservados</p>
+        </footer>
+        </header>
+    </body>
+</html>
