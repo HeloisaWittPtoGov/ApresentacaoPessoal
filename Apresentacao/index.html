@@ -47,6 +47,7 @@
                 font-size: 16px;
                 display: flex;
                 text-align: justify;
+                padding: 0 0 5px 0;
             }
             .botoes{
                 background-color:aliceblue;
@@ -76,6 +77,10 @@
                 height: 24px;;
                 width:100%;
             }
+            #campoNome{
+                border: 2px solid lightsteelblue;
+                border-radius: 5%;
+            }
             
         </style>
         <body>
@@ -86,8 +91,9 @@
                 <div class="infosPrincipais" style= "height: 200px; width: 57%;">
                     <h1 id="ola">Olá!</h1> 
                     <h2 id="subtititulo">Um pouco sobre mim:</h2>
-                    <p id="p1">Me chamo Maria Heloisa Witt, sou de Presidente Getúlio - Santa Catariana.</p>
-                    <p id="p2">Tecnóloga em administração pelo Instituto Federal Catarinense - Campus Ibirama, atualmente cursando a 5° fase do curso de engenharia de software na UDESC CEAVI.</p>
+                    <p id="descricao"> Me chamo Maria Heloisa Witt, sou de Presidente Getúlio - Santa Catariana.
+                        Tecnóloga em administração pelo Instituto Federal Catarinense - Campus Ibirama, atualmente cursando a 5° fase do curso de engenharia de software na UDESC CEAVI.</p>
+                    <input id="campoNome" type="text" name="Nome:" placeholder="Informe seu Nome">
                 </div>
                 <div class ="Imagem" style="height: 200px; width: 43%;">
                     <img src="../assets/IMG_1942.JPG"/> 
@@ -97,7 +103,6 @@
                 <button id="curriculo">Clique aqui para saber mais</button>
             </div>  
             <div id="final"></div>  
-
             <script src="app.js"></script>
         </body>
     </head>
