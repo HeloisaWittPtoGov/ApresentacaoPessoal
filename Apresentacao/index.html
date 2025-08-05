@@ -112,7 +112,30 @@
                 border:2px solid white;
                 color: white;
             }
-            
+            .hobbies{
+                background-color:var(--background-color2);
+                height: 100px;
+                width: 100%;
+                display: flex
+                justify-content:center;
+                align-items:center;
+                padding: 50px 0 50px 0;
+            }
+            .hobbies button{
+                background-color: var(--background-color);
+                border: none;
+                border-radius: 35px ;
+                height: 25px;
+                width: 100px;
+                font-size: 14px; 
+                margin: 10px 10px;   
+                transition: 0.3s;
+            }
+
+            .hobbies button:hover{
+                background-color: mediumseagreen;
+                border: 2px solid black;
+            }
             
         </style>
     </head>
@@ -134,8 +157,11 @@
                 <img src="../assets/IMG_1942.JPG"/> 
             </div>
         </div>     
-        <div class="botoes">
-            <button id="curriculo">Clique aqui para saber mais</button>
+        <div >
+            <div class="botoes"><button id="curriculo">Clique aqui para saber mais</button></div>
+            <div class="hobbies"><input id= "campoHobbies" type="list" name= "hobbies" placeholder="Informe um Hobbie">
+                <button id="gravar">Gravar</button>
+            </div>    
         </div>  
         <div id="final" class="final">
         </div>  
