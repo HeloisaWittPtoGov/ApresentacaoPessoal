@@ -15,6 +15,13 @@ botaoGravar.addEventListener("click", AddeExibirHobbies)
 let campoHobbies = document.getElementById("campoHobbies")
 let exibirHobbies = document.getElementById("exibiListaHobbies")
 let arrayHobbies = []
+let auxDescricao = textoDescricao.innerHTML;
+
+let botaoLimpar = document.getElementById("limpar")
+botaoLimpar.addEventListener("click", limpaLista)
+
+let botaoVoltar = document.getElementById("voltar")
+botaoVoltar.addEventListener("click",voltarInfosPrincipais)
 
 
 function onClickCurriculo(){
@@ -25,7 +32,9 @@ function onClickCurriculo(){
     else{
        textoDescricao.innerHTML = "Informe seu Nome!" 
     }
+
     nomeVisitante.value = "";
+    botaoVoltar.style.display = "block"
 }
 
 function mudarTema(){
@@ -41,6 +50,7 @@ function AddeExibirHobbies(){
     if(campoHobbies.value != ""){
         arrayHobbies.push(campoHobbies.value)
         campoHobbies.value = ""
+        botaoLimpar.style.display = "block"
         atualizaHobbies()
     } else{
         exibirHobbies.innerHTML = "Informe um Hobbie!"
@@ -56,6 +66,18 @@ function atualizaHobbies(){
     }
 }
 
+function limpaLista(){
+    if(arrayHobbies.length != 0){
+     arrayHobbies.length = 0;
+     exibirHobbies.innerHTML = "Lista limpa!"
+    }
+    botaoLimpar.style.display = "none"
+}
+
+function voltarInfosPrincipais(){
+    textoDescricao.innerHTML = auxDescricao;
+    botaoVoltar.style.display = "none";
+}
 console.log("mensagem")
 
 

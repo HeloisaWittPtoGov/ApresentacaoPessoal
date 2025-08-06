@@ -13,8 +13,8 @@
             }
 
             :root {
-                --background-color: lightsteelblue;
-                --background-color2: aliceblue;
+                --background-color: rgb(141, 179, 230);
+                --background-color2: rgb(210, 232, 252);
                 --color1: white;
 
             }
@@ -64,9 +64,9 @@
             }
             .infosPrincipais p{
                 font-size: 16px;
-                display: flex;
+                display: block;
                 text-align: justify;
-                padding: 0 0 5px 0;
+                padding: 5px 0 5px 0;
             }
             .botoes{
                 background-color:var(--background-color2);
@@ -112,20 +112,19 @@
                 transition: 0.3s;   
             }
             .header button:hover{
-                background-color:black;
+                background-color:mediumseagreen;
                 border:2px solid white;
                 color:var(--color1)
             }
             .hobbies{
                 background-color:var(--background-color2);
-                height: 200px;
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items:baseline;
                 padding: 50px 0 50px 0;
-                gap: 15px;
+                gap: 10px;
             }
             .hobbies input{
                 flex:0 0 200px;
@@ -157,6 +156,28 @@
                 align-items: center;
                 list-style-position: inside;
             }
+            .infosPrincipais input{
+                display: block;
+                margin-bottom: 10px;
+            }
+            .infosPrincipais button{
+                background-color: var(--background-color);
+                border: none;
+                border-radius: 35px ;
+                height: 25px;
+                width: 100px;
+                font-size: 14px; 
+                flex-basis: 100%;
+                margin: 0;
+                padding: 0;
+                display: block;
+                flex-direction:column;  
+                transition: 0.3s;
+            }
+            .infosPrincipais button:hover{
+                background-color: mediumseagreen;
+                border: 2px solid black;
+            }
             
         </style>
     </head>
@@ -166,13 +187,14 @@
                 <h1>Maria Heloisa Witt</h1>
                 <button id="Tema">Mudar Tema</button>
         </header>
-       <div id="Area!" style="display: flex;">
+       <div id="Area1" style="display: flex;">
             <div class="infosPrincipais" style= "height: 200px; width: 57%;">
                 <h1 id="ola">Olá!</h1> 
                 <h2 id="subtititulo">Um pouco sobre mim:</h2>
                 <p id="descricao"> Me chamo Maria Heloisa Witt, sou de Presidente Getúlio - Santa Catariana.
                     Tecnóloga em administração pelo Instituto Federal Catarinense - Campus Ibirama, atualmente cursando a 5° fase do curso de engenharia de software na UDESC CEAVI.</p>
                 <input id="campoNome" type="text" name="Nome:" placeholder="Informe seu Nome">
+                <button id="voltar" style="display: none;">Voltar</button>
             </div>
             <div class ="Imagem" style="height: 200px; width: 43%;">
                 <img src="../assets/IMG_1942.JPG"/> 
@@ -183,6 +205,7 @@
             <div class="hobbies">
                 <input id= "campoHobbies" type="text" name= "hobbies" placeholder="Informe um Hobbie">
                 <button id="gravar">Gravar</button>
+                <button id="limpar" style="display: none";">Limpar Lista</button>
                 <ul id="exibiListaHobbies"></ul>
             </div>    
         </div>  
