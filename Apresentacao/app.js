@@ -18,10 +18,14 @@ let arrayHobbies = []
 
 
 function onClickCurriculo(){
-
-let valorCampoNome = nomeVisitante.value    
-textoDescricao.innerHTML = valorCampoNome + ", Seguem as informações complementares!" 
-nomeVisitante.remove(campoNome);
+    let valorCampoNome = nomeVisitante.value  
+    if(valorCampoNome != ""){
+        textoDescricao.innerHTML = valorCampoNome + ", Seguem as informações complementares!" 
+    }
+    else{
+       textoDescricao.innerHTML = "Informe seu Nome!" 
+    }
+    nomeVisitante.value = "";
 }
 
 function mudarTema(){
@@ -34,9 +38,13 @@ function mudarTema(){
 }
 
 function AddeExibirHobbies(){
-    arrayHobbies.push(campoHobbies.value)
-    campoHobbies.value = ""
-    atualizaHobbies()
+    if(campoHobbies.value != ""){
+        arrayHobbies.push(campoHobbies.value)
+        campoHobbies.value = ""
+        atualizaHobbies()
+    } else{
+        exibirHobbies.innerHTML = "Informe um Hobbie!"
+    }
 }
 
 function atualizaHobbies(){
